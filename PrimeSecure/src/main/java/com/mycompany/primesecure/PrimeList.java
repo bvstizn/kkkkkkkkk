@@ -3,7 +3,7 @@ package com.mycompany.primesecure;
 
 import java.util.ArrayList;
 
-public class PrimesList extends ArrayList<Integer> {
+public class PrimeList extends ArrayList<Integer> {
     // Verifica si un número es primo
     public boolean isPrime(int n) {
         if (n <= 1) return false;
