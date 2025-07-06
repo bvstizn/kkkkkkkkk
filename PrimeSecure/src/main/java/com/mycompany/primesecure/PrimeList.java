@@ -1,4 +1,3 @@
-
 package com.mycompany.primesecure;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class PrimeList extends ArrayList<Integer> {
         return super.add(n);
     }
 
-    // Sobrescribe remove para asegurarse de que sólo se eliminen primos (opcional, ya que la lista sólo tiene primos)
+    // Sobrescribe remove para asegurarse de que sólo se eliminen primos (opcional)
     @Override
     public boolean remove(Object o) {
         if (o instanceof Integer) {

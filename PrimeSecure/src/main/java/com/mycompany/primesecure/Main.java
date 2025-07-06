@@ -2,7 +2,7 @@ package com.mycompany.primesecure;
 
 public class Main {
     public static void main(String[] args) {
-        PrimesList primesList = new PrimesList();
+        PrimeList primeList = new PrimeList();
 
         // Números a verificar/agregar
         int[] numeros = {2, 3, 4, 5, 15, 17, 19, 20, 23, 25, 29, 33, 37};
@@ -10,7 +10,7 @@ public class Main {
         // Creamos y arrancamos un hilo por cada número
         Thread[] threads = new Thread[numeros.length];
         for (int i = 0; i < numeros.length; i++) {
-            threads[i] = new PrimeAdderThread(primesList, numeros[i]);
+            threads[i] = new PrimeAdderThread(primeList, numeros[i]);
             threads[i].start();
         }
 
@@ -20,7 +20,7 @@ public class Main {
         }
 
         // Imprimimos el resultado final
-        System.out.println("\nLista final de primos: " + primesList);
-        System.out.println("Cantidad total de primos: " + primesList.getPrimesCount());
+        System.out.println("\nLista final de primos: " + primeList);
+        System.out.println("Cantidad total de primos: " + primeList.getPrimesCount());
     }
 }
